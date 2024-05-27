@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import Chart from '../components/Chart';
 import DisplayPlot from '../components/DisplayPlot';
+import D3plot from '../components/D3plot'
 import '../styles/Overview.scss';
 
 const Overview: React.FC = () => {
@@ -87,6 +88,18 @@ const Overview: React.FC = () => {
     },
   ];
 
+  const d3Data = [
+    { date: '2022-02-01', value: 1134 },
+    { date: '2022-03-05', value: 1156 },
+    { date: '2022-04-10', value: 1278 },
+    { date: '2022-05-01', value: 1441 },
+    { date: '2022-06-05', value: 1669 },
+    { date: '2022-07-10', value: 1896 },
+    { date: '2022-08-01', value: 2000 },
+    { date: '2022-09-01', value: 2200 },
+    { date: '2022-10-01', value: 2310 },
+  ];
+
   return (
     <Layout>
       <section className="overview">
@@ -111,6 +124,10 @@ const Overview: React.FC = () => {
             data={plotData}
             layout={plotLayout}
             title="Monthly Subscriptions"
+          />
+           <D3plot
+            data={d3Data}
+            title="Page visits per month"
           />
         </div>
       </section>

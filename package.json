@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
+    "@types/d3": "^7.4.3",
     "@types/react-plotly.js": "^2.6.3"
   }
 }
